@@ -11,6 +11,8 @@
 
 #include "Cluster.h"
 
+using namespace Clustering;
+
 namespace Clustering {
 
     class KMeans {

@@ -8,6 +8,8 @@
 
 #include "Point.h"
 
+
+
 namespace Clustering {
 
     typedef struct LNode *LNodePtr;
@@ -29,9 +31,9 @@ namespace Clustering {
 
         static unsigned int __idGenerator;
 
-        void __del();
-        void __cpy(LNodePtr pts);
-        bool __in(const Point &p) const;
+//        void __del();
+//        void __cpy(LNodePtr pts);
+//        bool __in(const Point &p) const;
 
         // inner class has private access
         class Centroid {
