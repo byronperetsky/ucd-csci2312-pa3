@@ -2592,51 +2592,51 @@ void test_cluster_centroid(ErrorContext &ec, unsigned int numRuns) { // TODO imp
     }
 }
 
-// Id
-void test_cluster_id(ErrorContext &ec, unsigned int numRuns) {
-    bool pass;
-
-    // Run at least once!!
-    assert(numRuns > 0);
-
-    ec.DESC("--- Test - Cluster - Id ---");
-
-    for (int run = 0; run < numRuns; run++) {
-
-        ec.DESC("sequential id-s");
-
-        {
-            Cluster *c[10];
-
-            for (int i=0; i<10; i++) c[i] = new Cluster(100);
-
-            pass = true;
-            for (int i=0; i<10; i++)
-                pass = pass && ((c[i]->getId() - c[0]->getId()) == i);
-
-            // cleanup
-            for (int i=0; i<10; i++) delete c[i];
-
-            ec.result(pass);
-        }
-
-        ec.DESC("no id generation on copy and assignment");
-
-        {
-            Cluster c1(10), c2(c1), c3 = c1;
-
-            pass = (c1.getId() == c2.getId()) && (c1.getId() == c3.getId());
-
-            Cluster c4(10);
-
-            c4 = c3;
-
-            pass = pass && (c4.getId() == c3.getId());
-
-            ec.result(pass);
-        }
-    }
-}
+//// Id
+//void test_cluster_id(ErrorContext &ec, unsigned int numRuns) {
+//    bool pass;
+//
+//    // Run at least once!!
+//    assert(numRuns > 0);
+//
+//    ec.DESC("--- Test - Cluster - Id ---");
+//
+//    for (int run = 0; run < numRuns; run++) {
+//
+//        ec.DESC("sequential id-s");
+//
+//        {
+//            Cluster *c[10];
+//
+//            for (int i=0; i<10; i++) c[i] = new Cluster(100);
+//
+//            pass = true;
+//            for (int i=0; i<10; i++)
+//                pass = pass && ((c[i]->getId() - c[0]->getId()) == i);
+//
+//            // cleanup
+//            for (int i=0; i<10; i++) delete c[i];
+//
+//            ec.result(pass);
+//        }
+//
+//        ec.DESC("no id generation on copy and assignment");
+//
+//        {
+//            Cluster c1(10), c2(c1), c3 = c1;
+//
+//            pass = (c1.getId() == c2.getId()) && (c1.getId() == c3.getId());
+//
+//            Cluster c4(10);
+//
+//            c4 = c3;
+//
+//            pass = pass && (c4.getId() == c3.getId());
+//
+//            ec.result(pass);
+//        }
+//    }
+//}
 
 // Init element selection ("pickCentroids")
 void test_cluster_initselection(ErrorContext &ec, unsigned int numRuns) {
@@ -2879,7 +2879,7 @@ void test_cluster_IO(ErrorContext &ec, unsigned int numRuns) {
 }
 
 
-//
+
 //// - - - - - - - - - - K M E A N S - - - - - - - - - -
 //
 //// Smoketest: constructor, destructor, loading points

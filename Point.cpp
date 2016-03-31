@@ -284,30 +284,7 @@ namespace Clustering{
             lhsPoint.__values[index] = lhsPoint.__values[index] + rhsPoint.getValue(index);
         }
 
-//        int lhsDims = 0, //Holds the total dimensions of lhs Point.
-//                rhsDims = 0, //Holds the total dimensions of rhs Point.
-//                biggestDims = 0; //Holds the larger of the 2 dimensions between rhs and lhs Points.
-//
-//        lhsDims = lhsPoint.getDims();
-//        rhsDims = rhsPoint.getDims();
-//
-//        if (rhsDims > lhsDims)
-//            biggestDims = rhsDims;
-//        else
-//            biggestDims = lhsDims;
-//
-//        if (lhsDims < rhsDims)
-//        {
-//            delete [] lhsPoint.__values;
-//
-//            lhsPoint.__values = new double[rhsDims];
-//        }
-//
-//        for (unsigned int index = 0; index < biggestDims ; ++index) {
-//
-//            lhsPoint[index]= lhsPoint[index] + rhsPoint.getValue(index);
-//
-//        }
+
 
         return lhsPoint;
 
@@ -323,30 +300,7 @@ namespace Clustering{
             lhsPoint.__values[index] = lhsPoint.__values[index] - rhsPoint.getValue(index);
         }
 
-//        int lhsDims = 0, //Holds the total dimensions of lhs Point.
-//                rhsDims = 0, //Holds the total dimensions of rhs Point.
-//                biggestDims = 0; //Holds the larger of the 2 dimensions between rhs and lhs Points.
-//
-//        lhsDims = lhsPoint.getDims();
-//        rhsDims = rhsPoint.getDims();
-//
-//        if (rhsDims > lhsDims)
-//            biggestDims = rhsDims;
-//        else
-//            biggestDims = lhsDims;
-//
-//        if (lhsDims < rhsDims)
-//        {
-//            delete [] lhsPoint.__values;
-//
-//            lhsPoint.__values = new double[rhsDims];
-//        }
-//
-//        for (unsigned int index = 0; index < biggestDims ; ++index) {
-//
-//            lhsPoint[index]= lhsPoint[index] - rhsPoint.getValue(index);
-//
-//        }
+
 
         return lhsPoint;
 
@@ -386,17 +340,7 @@ namespace Clustering{
 
         int biggestDims = lhsPoint.getDims(); //Holds the larger of the 2 dimensions between rhs and lhs Points.
 
-        /*lhsDims = 0, //Holds the total dimensions of lhs Point.
-                rhsDims = 0, //Holds the total dimensions of rhs Point.*/
 
-
-//        lhsDims = lhsPoint.getDims();
-//        rhsDims = rhsPoint.getDims();
-//
-//        if (rhsDims > lhsDims)
-//            biggestDims = rhsDims;
-//        else
-//            biggestDims = lhsDims;
 
 
         if (lhsPoint.__id == rhsPoint.__id)
@@ -449,31 +393,7 @@ namespace Clustering{
         return false;
 
 
-//        bool notEqual = false;
-//        bool equal = true;
-//
-//        int lhsDims = 0, //Holds the total dimensions of lhs Point.
-//            rhsDims = 0, //Holds the total dimensions of rhs Point.
-//            biggestDims = 0; //Holds the larger of the 2 dimensions between rhs and lhs Points.
-//
-//        lhsDims = lhsPoint.getDims();
-//        rhsDims = rhsPoint.getDims();
-//
-//        if (rhsDims > lhsDims)
-//            biggestDims = rhsDims;
-//        else
-//            biggestDims = lhsDims;
-//
-//        for (int index = 0; index < biggestDims ; ++index) {
-//
-//            if (lhsPoint.getValue(index) != rhsPoint.getValue(index)) {
-//
-//                return equal;
-//
-//            }
-//        }
-//
-//        return notEqual;
+
     }
 
     bool operator>(const Point & lhsPoint, const Point & rhsPoint){
